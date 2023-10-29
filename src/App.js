@@ -1,15 +1,15 @@
 import "./App.css";
-import Title from "./component/Title";
-import Bar from "./component/bar";
+
+// import Bar from "./component/bar";
 import Boton from "./component/boton";
+import Title from "./component/title";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Title></Title>
-
       <Boton></Boton>
-      <Bar></Bar>
+      {/* <Bar></Bar> */}
     </div>
   );
 }

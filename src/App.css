@@ -1,20 +1,17 @@
-.App {
-  text-align: center;
-  background-color: #4370c9;
-}
+/* .App{
 
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+ width: 100%;
+ height: 100vh;
+ overflow: hidden;
+ font-size: 16px;
+ 
 } */
+
+
+body {
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center; /* 垂直方向の中央揃え */
+  height: 100vh; /* 画面の高さを100%にする */
+  margin: 0; /* ブラウザのデフォルトのマージンをリセット */
+}
