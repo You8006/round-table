@@ -1,4 +1,5 @@
 {
+  "homepage": "https://You8006.github.io/round-table/",
   "name": "new-app",
   "version": "0.1.0",
   "private": true,
@@ -11,7 +12,7 @@
     "react-router-dom": "^6.17.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
-    "homepage": "https://You8006.github.io/round-table/"
+    
   },
   "scripts": {
     "predeploy": "npm run build",
