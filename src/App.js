@@ -13,7 +13,7 @@ function App() {
         <Routes>
           {/* トップページのルート */}
           <Route
-            path="/"
+            path="/roudtable-app/"
             element={
               <>
                 <div>
