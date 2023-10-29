@@ -1,20 +1,33 @@
 import React from "react";
 import "./boton.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Bar from "./bar"; // Barコンポーネントをインポート
 
 const Boton = () => {
-  // 褒めた回数と叱った回数のステートを定義
-  const [positiveCount, setPositiveCount] = useState(0);
-  const [negativeCount, setNegativeCount] = useState(0);
+  const today = new Date().toISOString().slice(0, 10); // 今日の日付を "YYYY-MM-DD" の形式で取得
+  const initialPositiveCount = Number(
+    localStorage.getItem(`${today}-positiveCount`) || 0
+  );
+  const initialNegativeCount = Number(
+    localStorage.getItem(`${today}-negativeCount`) || 0
+  );
 
-  // 褒めるボタンが押されたときのハンドラ関数
+  const [positiveCount, setPositiveCount] = useState(initialPositiveCount);
+  const [negativeCount, setNegativeCount] = useState(initialNegativeCount);
+
+  useEffect(() => {
+    localStorage.setItem(`${today}-positiveCount`, positiveCount.toString());
+  }, [positiveCount]);
+
+  useEffect(() => {
+    localStorage.setItem(`${today}-negativeCount`, negativeCount.toString());
+  }, [negativeCount]);
+
   const handlePositiveClick = () => {
     setPositiveCount(positiveCount + 1);
   };
 
-  // 叱るボタンが押されたときのハンドラ関数
   const handleNegativeClick = () => {
     setNegativeCount(negativeCount + 1);
   };
@@ -35,9 +48,6 @@ const Boton = () => {
         </button>
         　叱った回数 {negativeCount} 回
       </div>
-
-      <Bar positive={positiveCount} negative={negativeCount} />
-      {/* ステートをBarコンポーネントに渡す */}
     </div>
   );
 };

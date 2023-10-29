@@ -9,7 +9,8 @@
 
 
 body {
-  display: flex;
+  flex-direction: column;
+  text-align: center;
   justify-content: center; /* 水平方向の中央揃え */
   align-items: center; /* 垂直方向の中央揃え */
   height: 100vh; /* 画面の高さを100%にする */

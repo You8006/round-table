@@ -1,16 +1,42 @@
 import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-// import Bar from "./component/bar";
 import Boton from "./component/boton";
 import Title from "./component/title";
+import Calendar from "./component/calander";
 
 function App() {
   return (
-    <div className="App">
-      <Title></Title>
-      <Boton></Boton>
-      {/* <Bar></Bar> */}
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          {/* トップページのルート */}
+          <Route
+            path="/"
+            element={
+              <>
+                <div>
+                  <Title />
+                </div>
+                <div>
+                  <Boton />
+                </div>
+                <div>
+                  <Calendar></Calendar>
+
+                  {/* <Link to="/calendar">カレンダー表示</Link> */}
+                </div>
+              </>
+            }
+          />
+
+          {/* カレンダーコンポーネントのルート */}
+
+          <Route path="/calendar" element={<Calendar />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
