@@ -1,11 +1,5 @@
 import "./calander.css";
 
-// const Calander = () => {
-//   return <div>calander</div>;
-// };
-
-// export default Calander;
-
 import React, { useState } from "react";
 
 const Calendar = ({ onDateSelect }) => {
