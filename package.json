@@ -11,7 +11,7 @@
     "react-router-dom": "^6.17.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
-    "homepage": "https://You8006.github.io/roudtabel-app/"
+    "homepage": "https://you8006.github.io/roudtable-app/"
   },
   "scripts": {
     "start": "react-scripts start",
