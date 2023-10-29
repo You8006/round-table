@@ -33,7 +33,7 @@ function App() {
 
           {/* カレンダーコンポーネントのルート */}
 
-          <Route path="/calendar" element={<Calendar />} />
+          {/* <Route path="/calendar" element={<Calendar />} /> */}
         </Routes>
       </div>
     </Router>
